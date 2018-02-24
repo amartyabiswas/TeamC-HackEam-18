@@ -13,10 +13,28 @@ Super-Admin can create Admin and Members and Admin can create Members. All of th
 
 ```
 npm init
-```
-```
 npm install "all the packages" --save
-```
-```
 nodemon app.js
 ```
+
+## Some screens
+
+#### This is the home page
+![screenshot 71](https://user-images.githubusercontent.com/31181068/36628944-59df3ac8-1975-11e8-9eda-4cd0fc1591d0.png)
+
+![screenshot 72](https://user-images.githubusercontent.com/31181068/36628945-5d264a78-1975-11e8-9fdf-efc1e7afd7c9.png)
+#### This is the location of fxb Suraksha
+![screenshot 73](https://user-images.githubusercontent.com/31181068/36628946-5f50ae6a-1975-11e8-8fa0-82f8987c6ba6.png)
+#### Graps and piecharts of the statistics
+![screenshot 74](https://user-images.githubusercontent.com/31181068/36628947-615d62f2-1975-11e8-8e37-bfb6cbfc2afa.png)
+![screenshot 75](https://user-images.githubusercontent.com/31181068/36628949-648803c4-1975-11e8-8f0d-8c59f0ec2555.png)
+#### This login page
+![screenshot 76](https://user-images.githubusercontent.com/31181068/36628950-67987882-1975-11e8-8e5b-05cba40dfcdd.png)
+#### Home page of the Super-Admin
+![screenshot 77](https://user-images.githubusercontent.com/31181068/36628951-69e194f2-1975-11e8-9c65-c90ef2e40330.png)
+#### This is the Admission page
+![screenshot 78](https://user-images.githubusercontent.com/31181068/36628952-6bd28294-1975-11e8-9da2-06721aff4e2f.png)
+#### See all Admissions, edit and delete.
+![screenshot 80](https://user-images.githubusercontent.com/31181068/36628953-6e3d22b4-1975-11e8-9e18-c1df632ff83a.png)
+![screenshot 81](https://user-images.githubusercontent.com/31181068/36628954-70096030-1975-11e8-97ad-d6c1bb251bab.png)
+![screenshot 82](https://user-images.githubusercontent.com/31181068/36628956-717548b2-1975-11e8-8326-c6d9be74ab1b.png)
