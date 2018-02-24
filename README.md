@@ -7,3 +7,16 @@ We created a three tier data management system consisting of a super-admin, admi
   - Admin
   - Member
   
+Super-Admin can create Admin and Members and Admin can create Members. All of them can help enroll students. There are graphs and piecharts depicting the real world data.
+
+### To initialize the node server
+
+```
+npm init
+```
+```
+npm install "all the packages" --save
+```
+```
+nodemon app.js
+```
