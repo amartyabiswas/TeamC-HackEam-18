@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script>
+        window.onload = function () {
+            let male=0;
+            let female=0;
+
+            <%data.forEach(function (val) {%>
+                <%if(val.gender.toString()==="male"){%>
+                    male++;
+                <%}%>
+            <%});%>
+
+            <%data.forEach(function (val) {%>
+                <%if(val.gender.toString()==="female"){%>
+                    female++;
+                <%}%>
+            <%});%>
+
+            console.log(male);
+            let chart = new CanvasJS.Chart("chartContainer", {
+                exportEnabled: true,
+                animationEnabled: true,
+                title:{
+                    text: "Gender ratio of students in FXB"
+                },
+                legend:{
+                    cursor: "pointer",
+                    itemclick: explodePie
+                },
+                data: [{
+                    type: "pie",
+                    showInLegend: true,
+                    toolTipContent: "{name}: <strong>{y}%</strong>",
+                    indexLabel: "{name} - {y}%",
+                    dataPoints: [
+                        { y: male, name: "Male", exploded: true },
+                        { y: female, name: "Female" }
+                    ]
+                }]
+            });
+            chart.render();
+        }
+
+        function explodePie (e) {
+            if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+                e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+            } else {
+                e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+            }
+            e.chart.render();
+
+        }
+    </script>
+</head>
+<body>
+<div id="chartContainer" style="height: 35em; width: 100%"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>anatine - a free css template</title>
+
+    <link rel="stylesheet" href="/superAdmin.css" type="text/css" />
+    <link rel="stylesheet" href="/alladmission.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+
+<body>
+
+<section id="body" class="width">
+    <aside id="sidebar" class="column-left">
+
+        <header>
+            <h1><strong><a href="#">FXB Suraksha</a></strong></h1>
+            <h2>Welcome to our website!</h2>
+        </header>
+
+        <nav id="mainnav">
+            <ul>
+                <li><a href="/Admin">Home</a></li>
+                <li><a href="/admissionPage_admin">New Admission</a></li>
+                <li><a href="/admin/alladmissions">All admissions</a></li>
+                <li class="selected-item"><a href="/manageMember">Manage Users</a></li>
+                <li><a href="#">Update Blog</a></li>
+            </ul>
+        </nav>
+
+    </aside>
+    <section id="content" class="column-right">
+
+        <article>
+            <h2><strong>All Admissions</strong></h2>
+            <div class="article-info">Posted on <time datetime="2013-05-14">14 May</time> by <a href="#" rel="author">Joe Bloggs</a></div>
+            <a href="#" class="button">Profile</a>&nbsp;<a href="/MemberSignup" class="button button-reversed">Create Members</a>&nbsp;<a href="/logout" class="button">Logout</a>
+        </article>
+
+        <article class="expanded">
+            <p>Purchasing a template license for 8.00 GBP (at time of writing around 12 USD) gives you the right to remove any branding including links, logos and source tags relating to ZyPOP. As well as waiving the attribution requirement, your payment will also help us provide continued support for users as well as creating new web templates. Find out more about how to buy at the licensing page on our website which can be accessed at <a href="http://zypopwebtemplates.com/licensing" title="template license">http://zypopwebtemplates.com/licensing</a></p>
+            <%data.forEach(function (value) {%>
+            <div id="container">
+                <div class="product-details">
+                    <h1><%=value.username%></h1>
+                    <br><br>
+                    <p class="information">" Especially good for container gardening, the Angelonia will keep blooming all summer even if old flowers are removed. Once tall enough to cut, bring them inside and you'll notice a light scent that some say is reminiscent of apples. "</p>
+                    <div class="control">
+                        <button class="btn btn-primary"><a href="/moreInfoUser/<%= value._id %>" style="color: white">Profile</a></button>
+                    </div>
+                </div>
+                <div class="product-image">
+                    <img src="https://sc01.alicdn.com/kf/HTB1Cic9HFXXXXbZXpXXq6xXFXXX3/200006212/HTB1Cic9HFXXXXbZXpXXq6xXFXXX3.jpg" alt="Omar Dsoky">
+                    <div class="info">
+                        <h2>The Description</h2>
+                        <ul>
+                            <li><strong>Sun Needs: </strong>Full Sun</li>
+                            <li><strong>Soil Needs: </strong>Damp</li>
+                            <li><strong>Zones: </strong>9 - 11</li>
+                            <li><strong>Height: </strong>2 - 3 feet</li>
+                            <li><strong>Blooms in: </strong>Mid?Summer - Mid?Fall</li>
+                            <li><strong>Features: </strong>Tolerates heat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <%});%>
+        </article>
+    </section>
+    <div class="clear"></div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>

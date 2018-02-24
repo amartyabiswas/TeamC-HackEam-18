@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>anatine - a free css template</title>
+
+    <link rel="stylesheet" href="superAdmin.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+
+<body>
+
+<section id="body" class="width">
+    <aside id="sidebar" class="column-left">
+
+        <header>
+            <h1><strong><a href="#">FXB Suraksha</a></strong></h1>
+            <h2>Welcome to our website!</h2>
+        </header>
+
+        <nav id="mainnav">
+            <ul>
+                <li><a href="/SuperAdmin">Home</a></li>
+                <li class="selected-item"><a href="/admissionPage">New Admission</a></li>
+                <li><a href="/superadmin/alladmissions">All admissions</a></li>
+                <li><a href="/manageAdmins_su">Manage Admins</a></li>
+                <li><a href="/manageMember_su">Manage Users</a></li>
+                <li><a href="#">Update Blog</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <section id="content" class="column-right">
+
+        <article>
+            <h2><strong>The Admission Page</strong></h2>
+            <div class="article-info">Posted on <time datetime="2013-05-14">14 May</time> by <a href="#" rel="author">Joe Bloggs</a></div>
+            <a href="#" class="button">Profile</a>&nbsp;<a href="/AdminSignup" class="button button-reversed">Create Admin</a>&nbsp;<a href="/MemberSignup" class="button">Create Members</a>&nbsp;<a href="/logout" class="button button-reversed">Logout</a>
+        </article>
+
+        <article class="expanded">
+            <p>Purchasing a template license for 8.00 GBP (at time of writing around 12 USD) gives you the right to remove any branding including links, logos and source tags relating to ZyPOP. As well as waiving the attribution requirement, your payment will also help us provide continued support for users as well as creating new web templates. Find out more about how to buy at the licensing page on our website which can be accessed at <a href="http://zypopwebtemplates.com/licensing" title="template license">http://zypopwebtemplates.com/licensing</a></p>
+            <div class="row">
+                <h1 style="text-align: center">Get New Admission</h1>
+                <div style="width: 70%; margin: 25px auto;">
+                    <form action="/upload" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Upload Profile Page</label><br>
+                            <input name="myImage" class="btn btn-primary" type="file" style=" display: inline">
+                            <button type="submit" class="btn btn-primary">Upload Profile Pic</button>
+                        </div>
+                        <div class="mt-2">
+                            <img src="<%= file %>" width=40% height=auto class="img-fluid" style="border-radius: 100%">
+                        </div>
+                    </form>
+
+                    <form action="/superadmin/form" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input class="form-control" type="text" name="name" placeholder="Yosemite">
+                        </div>
+                        <div class="form-group">
+                            <label for="name" style="display: block">Month, Year and Gender</label>
+                            <select class="form-control" type="text" name="month" placeholder="Enter Month" style="width: 25%; display: inline">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                            <input class="form-control" type="text" name="year" placeholder="Enter Year" style="width: 25%; display: inline; margin-right: 80px">
+                            <input type="radio" name="gender" value="male" checked> Male
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="gender" value="female"> Female
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Enrollment Status</label>
+                            <!--<input class="form-control" type="text" name="enrollment" placeholder="Out of the 4 predetermined sections">-->
+                            <select class="form-control" type="text" name="enrollment" placeholder="Out of the 4 predetermined sections">
+                                <option value="Going to school">Going to school</option>
+                                <option value="Dropouts">Dropouts</option>
+                                <option value="Not going to school">Not going to school</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Native State/ Village</label>
+                            <input class="form-control" type="text" name="locality" id="native" placeholder="West-Bengal">
+                        </div>
+                        <div class="form-group">
+                            <label for="name" style="display: block">Have Aadhar Card?</label>
+                            <input type="radio" name="aadhar" value="yes" checked> True
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="aadhar" value="no"> False
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description/ Remarks</label>
+                            <input class="form-control" type="text" name="remarks" id="description" placeholder="Amazing Boy, who has studied till class 5th">
+                        </div>
+                        <div class="form-group" style="display: none">
+                            <input class="form-control" type="text" name="profile" value="<%= file %>">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                        </div>
+                    </form>
+                    <a href="/campgrounds">Go Back</a>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <div class="clear"></div>
+
+</section>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>

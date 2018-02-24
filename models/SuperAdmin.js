@@ -1,0 +1,1 @@
+let mongoose=require('mongoose');let passportLocalMongoose=require('passport-local-mongoose');let superadminSchema=new mongoose.Schema({    username: String,    password: String,    email: String,    super: {type: Boolean, default: true}});superadminSchema.plugin(passportLocalMongoose);module.exports=mongoose.model("superAdmin", superadminSchema);
