@@ -50,5 +50,5 @@ nodemon app.js
 
 ## Copyright
 ```
-This project has been made by Amartya Biswas and all rights reserved @ Amartya.
+This project has been made by Amartya Biswas and all rights reserved @ Amartya 2018.
 ```
